@@ -1,0 +1,88 @@
+/* 
+/* dekstop */
+@media (max-width:1920px) {}
+
+
+/* tablet */
+@media (max-width:758px) {
+    html {
+        font-size: 65%;
+    }
+
+    .nav-icon #menu {
+        display: inline-block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        transition: 0.3s;
+        width: 25rem;
+        height: 100vh;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .navbar .nav-menu a {
+        color: #000;
+        display: block;
+        justify-content: center;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-weight: bold;
+        /* font-size: 1.2rem; */
+    }
+
+    .navbar .nav-menu a::after {
+        transform-origin: 0 0;
+    }
+
+    .navbar .nav-menu a:hover::after {
+        transform: scaleX(1);
+    }
+
+
+}
+
+/* phone */
+@media (max-width:476px) {
+    html {
+        font-size: 55%;
+    }
+
+    .landing-page {
+        height: auto;
+        min-height: 100vh;
+        flex-wrap: wrap-reverse;
+    }
+
+    .landing-text p {
+        text-align: left;
+    }
+
+    .landing-text button.landing-cta {
+        width: 100%;
+    }
+
+    .landing-image img {
+        height: 240px;
+        width: 370px;
+    }
+
+    .brand {
+        height: fit-content;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        text-align: justify;
+        justify-content: center;
+    }
+
+    .brand img {
+        width: min-content;
+    }
+}

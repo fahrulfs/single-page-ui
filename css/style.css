@@ -1,0 +1,134 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+.feather {
+    width: 1.3rem;
+    height: 1.3rem;
+}
+
+/*================== FONT ============= FONT ====== FONT =========================== */
+
+:root {
+    --main-color: #E09370;
+    --h1-sz: 3rem;
+    --h2-sz: 2.8rem;
+    --h3-sz: 1.25rem;
+    --p-sz: 1rem;
+
+}
+
+h1 {
+    text-align: left;
+    font-weight: 500;
+    font-family: 'Lora', sans-serif;
+    font-style: oblique;
+    font-size: var(--h1-sz);
+}
+
+/*================== FONT ============= FONT ====== FONT =========================== */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'poppins', sans-, 'Lora', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.navbar {
+    top: 0;
+    position: fixed;
+    padding: 1rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    /* border-bottom: 1px solid var(--main-color); */
+    width: 100%;
+}
+
+.nav-menu a {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #000;
+    text-transform: capitalize;
+    margin: 0 0.8rem;
+    display: inline-block;
+}
+
+.nav-menu a::after {
+    content: '';
+    display: block;
+    padding: 0.2rem;
+    border-bottom: 0.1rem solid var(--main-color);
+    transform: scaleX(0);
+    transition: 0.2s ease;
+}
+
+.nav-menu a:hover::after {
+    transform: scaleX(1);
+}
+
+.nav-icon a {
+    display: inline-block;
+    margin: 0 0.5rem;
+    color: #000;
+}
+
+.nav-icon a:hover {
+    color: var(--main-color);
+}
+
+#menu {
+    display: none;
+}
+
+.landing-page {
+    align-items: center;
+    top: 0;
+    padding: 7%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: no-wrap;
+}
+
+.landing-image img {
+    width: 560px;
+    height: 460px;
+}
+
+.landing-text p {
+    margin-top: 2rem;
+    font-size: var(--p-sz);
+}
+
+.landing-text button.landing-cta {
+    border-radius: 0.5rem;
+    border: none;
+    margin-top: 2rem;
+    height: 2.7rem;
+    width: 17rem;
+    background: var(--main-color);
+    color: #000;
+}
+
+.landing-text button.landing-cta:hover {
+    transition: 0.2s linear;
+    background: #000;
+    color: #fff;
+}
+
+.brand {
+    height: 100px;
+    justify-content: space-evenly;
+    display: flex;
+    background-color: rgba(214, 214, 214, 0.8);
+    width: 100%;
+}
