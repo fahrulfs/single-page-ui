@@ -1,6 +1,6 @@
 /* 
 /* dekstop */
-@media (max-width:1920px) {}
+@media (min-width:1200px) {}
 
 
 /* tablet */
@@ -84,5 +84,15 @@
 
     .brand img {
         width: min-content;
+    }
+
+    .top-selection {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .best-seller-item {
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }

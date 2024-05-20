@@ -15,8 +15,8 @@
 :root {
     --main-color: #E09370;
     --h1-sz: 3rem;
-    --h2-sz: 2.8rem;
-    --h3-sz: 1.25rem;
+    --h2-sz: 2.2rem;
+    --h3-sz: 1.2rem;
     --p-sz: 1rem;
 
 }
@@ -29,6 +29,19 @@ h1 {
     font-size: var(--h1-sz);
 }
 
+p {
+    font-family: 'Poppins';
+}
+
+h2 {
+    font-size: var(--h2-sz);
+    text-transform: capitalize;
+}
+
+h3 {
+    font-size: var(--h3-sz);
+}
+
 /*================== FONT ============= FONT ====== FONT =========================== */
 
 
@@ -37,7 +50,7 @@ html {
 }
 
 body {
-    font-family: 'poppins', sans-, 'Lora', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Lora', sans-serif, 'Poppins', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
@@ -54,7 +67,7 @@ body {
 }
 
 .nav-menu a {
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
     color: #000;
     text-transform: capitalize;
@@ -126,9 +139,92 @@ body {
 }
 
 .brand {
+    top: 0;
     height: 100px;
     justify-content: space-evenly;
     display: flex;
-    background-color: rgba(214, 214, 214, 0.8);
+    background-color: #fff;
     width: 100%;
+}
+
+/* slection */
+.selection {
+    min-height: 50vh;
+    top: 0;
+    padding: 7%;
+    width: 100%;
+}
+
+.top-selection {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-selection-item img {
+    border-radius: 0.5rem;
+    width: 370px;
+    height: 370px;
+}
+
+.top-selection-item {
+    text-align: center;
+    position: relative;
+    color: #fff;
+}
+
+.top-selection-item-name {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.best-seller {
+    min-height: 50vh;
+    top: 0;
+    padding: 7%;
+    width: 100%;
+}
+
+.best-seller-cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-seller-cta button {
+    text-transform: capitalize;
+    background: var(--main-color);
+    color: #000;
+    width: 100px;
+    height: 2.7rem;
+    outline: none;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.best-seller-cta button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.best-seller-item {
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-seller-card {
+    border: 1px solid rgb(204, 204, 204);
+    padding: 0.5rem;
+}
+
+.best-seller-card-item p.item-name {
+    font-weight: bolder;
+}
+
+.best-seller-card-item a {
+    color: yellow;
 }
