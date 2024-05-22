@@ -14,6 +14,7 @@
 
 :root {
     --main-color: #E09370;
+    --accent-color: #12070B;
     --h1-sz: 3rem;
     --h2-sz: 2.2rem;
     --h3-sz: 1.2rem;
@@ -22,6 +23,7 @@
 }
 
 h1 {
+    color: #12070B;
     text-align: left;
     font-weight: 500;
     font-family: 'Lora', sans-serif;
@@ -30,6 +32,7 @@ h1 {
 }
 
 p {
+
     font-family: 'Poppins';
 }
 
@@ -53,7 +56,7 @@ body {
     font-family: 'Lora', sans-serif, 'Poppins', sans-serif, Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
+/* NAVBAR */
 .navbar {
     top: 0;
     position: fixed;
@@ -64,6 +67,7 @@ body {
     background-color: #fff;
     /* border-bottom: 1px solid var(--main-color); */
     width: 100%;
+    z-index: 999999999999999999999999;
 }
 
 .nav-menu a {
@@ -102,6 +106,10 @@ body {
     display: none;
 }
 
+/* NAVBAR */
+
+
+/* LANDING PAGE */
 .landing-page {
     align-items: center;
     top: 0;
@@ -138,14 +146,20 @@ body {
     color: #fff;
 }
 
+/* LANDING PAGE */
+
+
+/* BRAND LOGO */
 .brand {
-    top: 0;
+    padding: 0 7%;
     height: 100px;
-    justify-content: space-evenly;
+    justify-content: space-between;
     display: flex;
     background-color: #fff;
     width: 100%;
 }
+
+/* BRAND LOGO */
 
 /* slection */
 .selection {
@@ -161,12 +175,6 @@ body {
     justify-content: space-between;
 }
 
-.top-selection-item img {
-    border-radius: 0.5rem;
-    width: 370px;
-    height: 370px;
-}
-
 .top-selection-item {
     text-align: center;
     position: relative;
@@ -174,12 +182,32 @@ body {
 }
 
 .top-selection-item-name {
+    z-index: 9093809823001381;
     position: absolute;
     bottom: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
+/* ADD OVERLAY COLOR TO IMAGE */
+.top-selection-item img {
+    border-radius: 0.5rem;
+    width: 370px;
+    height: 370px;
+}
+
+.top-selection-item::before {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 370px;
+    height: 370px;
+}
+
+/* BEST SELLER */
 .best-seller {
     min-height: 50vh;
     top: 0;
@@ -217,14 +245,177 @@ body {
 }
 
 .best-seller-card {
-    border: 1px solid rgb(204, 204, 204);
+    border: 1px solid rgb(238, 234, 234);
     padding: 0.5rem;
 }
 
 .best-seller-card-item p.item-name {
-    font-weight: bolder;
+    font-weight: bold;
 }
 
 .best-seller-card-item a {
     color: yellow;
 }
+
+/* ORDER STEP */
+.step {
+    padding: 2rem 0;
+    background-color: var(--main-color);
+    max-width: 100%;
+    margin: 7%;
+    height: 50vh;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.step h2 {
+    text-align: center;
+}
+
+.stepper-wrapper {
+    padding: 0 7%;
+    align-items: center;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.stepper-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    color: var(--accent-color);
+}
+
+.stepper-item::after {
+    position: absolute;
+    content: "";
+    border-bottom: 2px dashed #A14B38;
+    width: 100%;
+    top: 20px;
+    left: 50%;
+}
+
+.stepper-item:last-child::after {
+    display: none;
+}
+
+.stepper-item .step-counter {
+    position: relative;
+    z-index: 139232;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #FBE3C9;
+    margin-bottom: 6px;
+}
+
+/* ORDER STEP */
+
+
+/* SUBSCRIBE */
+.subscribe {
+    text-align: center;
+    top: 0;
+    padding: 2rem 0;
+    max-width: 100%;
+    margin: 0 7%;
+    min-height: 50vh;
+    border-radius: 0.5rem;
+}
+
+.subscribe-wrapper {
+    margin-top: 2rem;
+    padding: 0 7%;
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    gap: 0 1rem;
+}
+
+.subscribe-input {
+    width: 80%;
+    display: flex;
+    justify-content: end;
+}
+
+.subscribe-cta {
+    width: 5%;
+    display: flex;
+    justify-content: start;
+}
+
+.subscribe-input input[type=email] {
+    text-transform: capitalize;
+    font-size: var(--p-sz);
+    outline: none;
+    padding: 0 1rem;
+    border-radius: 0.5rem;
+    border: solid 1px var(--accent-color);
+    height: 40px;
+    width: 100%;
+}
+
+.subscribe-cta button.btn {
+    background-color: var(--main-color);
+    border-radius: 0.5rem;
+    border: none;
+    color: #000;
+    padding: 10px;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
+
+.subscribe-cta button.btn:hover {
+    background-color: #000;
+    color: #fff;
+    transition: 0.3s linear;
+}
+
+/* SUBSRIBE */
+
+
+.footer {
+    color: #000;
+    background: #fff;
+    padding: 0 7%;
+    max-width: 100%;
+    min-height: 50vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+}
+
+
+.footer-item img {
+    width: 120px;
+}
+
+.footer-item a {
+    margin-bottom: 0.5rem;
+    color: #000;
+    list-style: none;
+    display: block;
+}
+
+.footer-item a:hover {
+    transition: 0.2s;
+    color: var(--main-color);
+}
+
+.footer-item h3 {
+    margin-bottom: 0.3rem;
+    text-transform: capitalize;
+    margin-top: 0.7rem;
+}
+
+
+/* FOOTER */
