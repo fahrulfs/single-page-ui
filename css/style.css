@@ -32,7 +32,6 @@ h1 {
 }
 
 p {
-
     font-family: 'Poppins';
 }
 
@@ -65,12 +64,12 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: #fff;
-    /* border-bottom: 1px solid var(--main-color); */
     width: 100%;
     z-index: 999999999999999999999999;
 }
 
 .nav-menu a {
+    z-index: 999999999999999999999;
     font-size: 1rem;
     font-weight: 600;
     color: #000;
@@ -118,11 +117,7 @@ body {
     display: flex;
     justify-content: space-between;
     flex-wrap: no-wrap;
-}
-
-.landing-image img {
-    width: 560px;
-    height: 460px;
+    min-height: 100vh;
 }
 
 .landing-text p {
@@ -151,11 +146,12 @@ body {
 
 /* BRAND LOGO */
 .brand {
+    height: 150px;
     padding: 0 7%;
-    height: 100px;
     justify-content: space-between;
     display: flex;
-    background-color: #fff;
+    align-items: center;
+    background-color: #f7f7f7;
     width: 100%;
 }
 
@@ -163,6 +159,7 @@ body {
 
 /* slection */
 .selection {
+    margin-top: 10px;
     min-height: 50vh;
     top: 0;
     padding: 7%;
@@ -192,26 +189,27 @@ body {
 /* ADD OVERLAY COLOR TO IMAGE */
 .top-selection-item img {
     border-radius: 0.5rem;
-    width: 370px;
-    height: 370px;
+    width: 350px;
+    height: 350px;
 }
 
-.top-selection-item::before {
+.top-selection-item::after {
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 0.5rem;
     content: "";
     position: absolute;
     top: 0;
     left: 0;
-    width: 370px;
-    height: 370px;
+    width: 350px;
+    height: 350px;
 }
+
+
+
 
 /* BEST SELLER */
 .best-seller {
-    min-height: 50vh;
-    top: 0;
-    padding: 7%;
+    padding: 0 7%;
     width: 100%;
 }
 
@@ -263,7 +261,6 @@ body {
     background-color: var(--main-color);
     max-width: 100%;
     margin: 7%;
-    height: 50vh;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -325,16 +322,13 @@ body {
 .subscribe {
     text-align: center;
     top: 0;
-    padding: 2rem 0;
     max-width: 100%;
-    margin: 0 7%;
-    min-height: 50vh;
+    margin: 7%;
     border-radius: 0.5rem;
 }
 
 .subscribe-wrapper {
     margin-top: 2rem;
-    padding: 0 7%;
     display: flex;
     justify-content: center;
     max-width: 100%;
@@ -387,9 +381,8 @@ body {
 .footer {
     color: #000;
     background: #fff;
-    padding: 0 7%;
+    padding: 7%;
     max-width: 100%;
-    min-height: 50vh;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, auto));
 }
